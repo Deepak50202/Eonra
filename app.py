@@ -36,6 +36,36 @@ def eonra_reasoning(question):
         trace.append("→ Detected keyword: 'internship'")
         response = "🎯 Internships help you apply your learning in real companies and improve your resume."
         follow_up = "Need tips on how to find CPT-eligible internships?"
+  
+    elif "streamlit" in question:
+        topic = "Streamlit"
+        trace.append("→ Detected keyword: 'streamlit'")
+        response = "📊 Streamlit turns Python scripts into shareable web apps. It’s great for beginners and prototyping."
+        follow_up = "Want to learn how to deploy your Streamlit app?"
+
+    elif "resume" in question:
+        topic = "Resume Tips"
+        trace.append("→ Detected keyword: 'resume'")
+        response = "📄 A strong resume should show projects, skills, and relevant certifications clearly."
+        follow_up = "Would you like tips for ATS-friendly formatting?"
+
+    elif "project" in question:
+        topic = "Project Building"
+        trace.append("→ Detected keyword: 'project'")
+        response = "🛠 Projects show initiative. Even simple tools like calculators or logic bots are great!"
+        follow_up = "Need beginner-friendly project ideas?"
+
+    elif "deploy" in question or "deployment" in question:
+        topic = "Deployment"
+        trace.append("→ Detected keyword: 'deploy'")
+        response = "🚀 You can deploy Python apps using Streamlit Share, Render, or Hugging Face Spaces."
+        follow_up = "Want help deploying Eonra online?"
+
+    elif "learn" in question or "learning path" in question:
+        topic = "Learning Path"
+        trace.append("→ Detected keyword: 'learn'")
+        response = "📚 Start with Python basics, build projects, then explore topics like AI, web, or data."
+        follow_up = "Need a step-by-step plan based on your goals?"
 
     else:
         trace.append("→ No clear keyword found")
@@ -43,6 +73,7 @@ def eonra_reasoning(question):
             response = f"🤔 Not sure what you meant. Are you asking a follow-up about **{st.session_state.last_topic}**?"
         else:
             response = "🔍 I'm still learning! Try asking about AI, Python, or internships."
+
 
     # Save topic to memory
     if topic:
