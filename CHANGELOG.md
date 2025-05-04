@@ -1,3 +1,8 @@
+## [v0.2] - 2025-05-04
+- Added memory to track and display the last 3 user questions
+- Eonra now shows recent context before responding
+- Improved natural flow of follow-up logic
+
 # 📘 Changelog – Eonra
 
 All notable changes to this project will be documented in this file.
