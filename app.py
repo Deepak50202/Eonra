@@ -80,6 +80,11 @@ def eonra_reasoning(question):
         st.session_state.last_topic = topic
 
     return trace, response, follow_up
+# Button to clear memory
+if st.button("🧹 Clear Memory"):
+    st.session_state.question_history = []
+    st.session_state.last_topic = None
+    st.success("Memory cleared. Eonra is ready for a new session!")
 
 if st.button("Think"):
     # Save current question to history
