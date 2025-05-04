@@ -1,5 +1,10 @@
 import streamlit as st
 
+# Initialize memory for recent questions
+if "question_history" not in st.session_state:
+    st.session_state.question_history = []
+
+
 st.title("🧠 Eonra – Brain-Inspired Reasoning System")
 
 # Use Streamlit session state to store memory
@@ -46,6 +51,18 @@ def eonra_reasoning(question):
     return trace, response, follow_up
 
 if st.button("Think"):
+    # Save current question to history
+    if user_input:
+        st.session_state.question_history.append(user_input)
+        # Keep only last 3 questions
+        st.session_state.question_history = st.session_state.question_history[-3:]
+
+    # Show recent context
+    if st.session_state.question_history:
+        st.markdown("### 🧠 Recent Context:")
+        for q in st.session_state.question_history:
+            st.write(f"• {q}")
+
     trace_steps, final_answer, followup = eonra_reasoning(user_input)
 
     st.markdown("### 🧠 Thought Process:")
