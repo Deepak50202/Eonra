@@ -1,3 +1,9 @@
+## [v0.4] – 2025-05-04
+### Added
+- 🧹 Clear Memory button to reset session state
+- Resets both recent question history and topic memory
+- Enhances user control and session clarity
+
 ## [v0.3] – 2025-05-04
 ### Added
 - 🧠 5 new reasoning topics:
