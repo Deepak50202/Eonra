@@ -12,6 +12,8 @@ It simulates how the human brain breaks down questions, traces logical paths, an
 - 🔍 Displays a logic trace for each answer
 - 🔄 Suggests follow-up actions or learning paths
 - 💻 Built as a beginner-friendly MVP using Python
+- 🧠 Remembers your last topic and connects vague follow-up questions to it
+
 
 ---
 
