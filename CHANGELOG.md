@@ -1,3 +1,14 @@
+## [v0.3] – 2025-05-04
+### Added
+- 🧠 5 new reasoning topics:
+  - Streamlit
+  - Resume Tips
+  - Project Guidance
+  - Deployment Methods
+  - Learning Path Advice
+- Improved Eonra's ability to answer broader questions
+- Enhanced user experience with more contextual responses
+
 ## [v0.2] - 2025-05-04
 - Added memory to track and display the last 3 user questions
 - Eonra now shows recent context before responding
