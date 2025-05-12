@@ -12,6 +12,52 @@ if "last_topic" not in st.session_state:
     st.session_state.last_topic = None
 
 user_input = st.text_input("💬 Ask Eonra a question:")
+st.markdown("**💡 Try one of these starter questions:**")
+col1, col2, col3 = st.columns(3)
+with col1:
+    if st.button("What is AI?"):
+        user_input = "What is AI?"
+with col2:
+    if st.button("What is Streamlit?"):
+        user_input = "What is Streamlit?"
+with col3:
+    if st.button("How to build a Python project?"):
+        user_input = "How to build a Python project?"
+
+# Related topic suggestions
+related_topics = {
+    "ai": [
+        "Machine Learning basics",
+        "Neural Networks overview",
+        "How AI powers real apps"
+    ],
+    "python": [
+        "Build a calculator app",
+        "Use Python with Streamlit",
+        "Learn Python data structures"
+    ],
+    "internship": [
+        "Tips for CPT applications",
+        "Build a resume with projects",
+        "How to find tech internships"
+    ],
+    "streamlit": [
+        "Deploy a Streamlit app",
+        "Streamlit project idea",
+        "Use GitHub + Streamlit"
+    ],
+    "resume": [
+        "Make your resume ATS-friendly",
+        "Showcase GitHub on your resume",
+        "List certifications effectively"
+    ],
+    "project": [
+        "Project idea using Python + AI",
+        "How to write a README file",
+        "Host your project online"
+    ]
+}
+
 
 def eonra_reasoning(question):
     question = question.lower()
@@ -107,7 +153,35 @@ if st.button("Think"):
 
     st.markdown("### 🤖 Eonra's Response:")
     st.write(final_answer)
-
     if followup:
         st.markdown("### 🔄 Follow-Up Suggestion:")
         st.write(followup)
+    # Session summary
+    if len(st.session_state.question_history) >= 2:
+        topics_covered = []
+        for q in st.session_state.question_history:
+            for keyword in related_topics:
+                if keyword in q.lower() and keyword not in topics_covered:
+                    topics_covered.append(keyword)
+
+        if topics_covered:
+            st.markdown("### 🧾 Session Summary:")
+            st.write(f"You asked about: **{', '.join(topics_covered).title()}**. Keep it up! 💪")
+
+    # Feedback buttons
+    st.markdown("### 💬 Was this helpful?")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("👍 Yes"):
+            st.success("Thanks for the feedback! 😊")
+    with col2:
+        if st.button("👎 No"):
+            st.info("Thanks! Eonra is still learning. We'll try to improve.")
+
+    # ✅ Show related topic suggestions (moved outside feedback)
+    if st.session_state.last_topic:
+        keyword = st.session_state.last_topic.lower()
+        if keyword in related_topics:
+            st.markdown("### 🧠 You might also be interested in:")
+            for suggestion in related_topics[keyword]:
+                st.write(f"• {suggestion}")

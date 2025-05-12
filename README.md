@@ -1,19 +1,20 @@
 # 🧠 Eonra – Brain-Inspired Reasoning System
 
-**Eonra** is a logic-based reasoning assistant built using Python and Streamlit.  
-It simulates how the human brain breaks down questions, traces logical paths, and responds with intelligent follow-up suggestions.
+Eonra is a logic-driven AI assistant built using Python and Streamlit.  
+It simulates how a human might reason through a question step by step — with clear logic tracing, memory, and follow-up suggestions.
 
 ---
 
-## 🚀 Features
+## 🚀 Features (v0.5)
 
 - ✅ Accepts open-ended questions
-- 🧠 Simulates brain-like reasoning steps
-- 🔍 Displays a logic trace for each answer
-- 🔄 Suggests follow-up actions or learning paths
-- 💻 Built as a beginner-friendly MVP using Python
-- 🧠 Remembers your last topic and connects vague follow-up questions to it
-
+- 🧠 Detects keywords and simulates reasoning
+- 🔁 Remembers the last topic and recent questions
+- 🧹 Clear Memory button to reset session
+- 💬 Feedback buttons (👍 / 👎) to simulate learning
+- 💡 Starter buttons for users who don’t know what to ask
+- 🧾 Smart Session Summary of what you explored
+- 🔄 Suggests related topics to continue the conversation
 
 ---
 
@@ -22,46 +23,34 @@ It simulates how the human brain breaks down questions, traces logical paths, an
 I'm currently learning Python, AI, and real-world software development.  
 Eonra started as a personal learning project to practice:
 - Programming with Python
-- Building apps with Streamlit
-- Creating logic systems
-- Thinking like an AI developer
+- Web apps with Streamlit
+- Logic design and user experience
+- Building AI-style behavior without using an actual model
 
-I’m continuing to expand Eonra week by week — this is just the beginning!
+This project continues to evolve — and I’m learning by building.
 
 ---
 
 ## 🔧 Tech Stack
 
-- Python 3
+- Python 3.x
 - Streamlit
-- Custom reasoning logic (no AI model used yet)
+- GitHub (version control)
+- Pure logic-based reasoning (no OpenAI or LLMs yet)
 
 ---
 
 ## 📚 Future Plans
 
-- Connect to OpenAI's GPT API (optional)
-- Add memory or chat history
-- Turn into a real SaaS app
-- Host live online for public use
+- Optional OpenAI GPT integration
+- Add "Save Session" or export feature
+- Host live demo via Streamlit Community Cloud or HuggingFace
 
 ---
 
-## ⚖️ Disclaimer
+## 🧠 Try It Yourself
 
-This is a personal project for learning purposes.  
-Some inspiration is drawn from AI models like ChatGPT, but this app does **not copy or repackage** any proprietary model or content.  
-If GPT is integrated in future versions, proper licensing and attribution will be followed.
-
----
-
-## 📬 Feedback
-
-Feel free to suggest topics, features, or improvements by opening an issue or contacting me on LinkedIn!
-
----
-
-## 🔗 Connect with Me
-
-[🔗 LinkedIn](www.linkedin.com/in/deepakenjapuri)  
-📧 Email: deepakenjapuri.go@gmail.com
+```bash
+cd eonra-mvp
+venv\Scripts\activate
+streamlit run app.py
