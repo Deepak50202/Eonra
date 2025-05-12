@@ -18,7 +18,7 @@ It simulates how a human might reason through a question step by step — with c
 
 ---
 
-## 💡 Why I Built This
+## Why I Built This
 
 I'm currently learning Python, AI, and real-world software development.  
 Eonra started as a personal learning project to practice:
@@ -31,7 +31,7 @@ This project continues to evolve — and I’m learning by building.
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - Python 3.x
 - Streamlit
@@ -48,7 +48,7 @@ This project continues to evolve — and I’m learning by building.
 
 ---
 
-## 🧠 Try It Yourself
+##  Try It Yourself
 
 ```bash
 cd eonra-mvp

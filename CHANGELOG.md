@@ -1,10 +1,11 @@
 ## [v0.5] – 2025-05-12
 ### Added
 - 💡 Starter question buttons for guided interaction
-- 💬 Feedback system (👍👎) with user response messages
-- 🧾 Session summary that highlights topics explored during the session
-- 🧠 Related topic suggestions based on last topic memory
-- 📌 Improved overall UX for beginner-friendly usage
+- 💬 Feedback system (👍👎) with thank-you messages
+- 🧾 Session summary that highlights explored topics
+- 🧠 Related topic suggestions based on memory
+- 🧹 Clear Memory button to reset the session
+- ✅ Improved user experience and accessibility
 
 ## [v0.4] – 2025-05-04
 ### Added
