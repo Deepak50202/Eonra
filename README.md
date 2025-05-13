@@ -1,56 +1,62 @@
-# 🧠 Eonra – Brain-Inspired Reasoning System
+# Eonra – Brain-Inspired AI Reasoning System
 
-Eonra is a logic-driven AI assistant built using Python and Streamlit.  
-It simulates how a human might reason through a question step by step — with clear logic tracing, memory, and follow-up suggestions.
+Eonra is a logic-driven AI assistant that simulates how the human brain reasons, recalls, and responds. It combines structured topic recognition with fallback support using OpenAI's GPT API for open-ended queries.
+
+This project was built as a portfolio-grade MVP to demonstrate practical skills in Python development, AI integration, and product thinking.
 
 ---
 
-## 🚀 Features (v0.5)
+## Features
 
-- ✅ Accepts open-ended questions
-- 🧠 Detects keywords and simulates reasoning
-- 🔁 Remembers the last topic and recent questions
-- 🧹 Clear Memory button to reset session
-- 💬 Feedback buttons (👍 / 👎) to simulate learning
-- 💡 Starter buttons for users who don’t know what to ask
-- 🧾 Smart Session Summary of what you explored
-- 🔄 Suggests related topics to continue the conversation
+- Logic-based keyword reasoning system
+- Short-term memory to track recent user questions
+- Intelligent follow-up suggestions based on context
+- Fallback to GPT-3.5-turbo for unmatched queries
+- Starter prompts and session summaries
+- Clear feedback interface (helpful / not helpful)
+- Secrets management using Streamlit configuration
+- One-click session reset (Clear Memory)
 
 ---
 
 ## Why I Built This
 
-I'm currently learning Python, AI, and real-world software development.  
-Eonra started as a personal learning project to practice:
-- Programming with Python
-- Web apps with Streamlit
-- Logic design and user experience
-- Building AI-style behavior without using an actual model
+This project was designed to go beyond a standard chatbot. Eonra is a blend of traditional logic and generative AI, structured to mimic real cognitive behavior and guide users toward deeper learning and better answers.
 
-This project continues to evolve — and I’m learning by building.
+It was also my way of learning and applying:
+- Python and Streamlit
+- API integration (OpenAI)
+- Version control (Git/GitHub)
+- Application structure and memory handling
+- Clean UI and user flow
 
 ---
 
 ## Tech Stack
 
-- Python 3.x
+- Python 3
 - Streamlit
-- GitHub (version control)
-- Pure logic-based reasoning (no OpenAI or LLMs yet)
+- OpenAI GPT API (v1.0 SDK)
+- Git and GitHub
 
 ---
 
-## 📚 Future Plans
+## Future Plans
 
-- Optional OpenAI GPT integration
-- Add "Save Session" or export feature
-- Host live demo via Streamlit Community Cloud or HuggingFace
+- Long-term conversation memory
+- User authentication and personal context
+- Deployment as a SaaS application
+- Customizable GPT keys per user
 
 ---
 
-##  Try It Yourself
+## Disclaimer
 
-```bash
-cd eonra-mvp
-venv\Scripts\activate
-streamlit run app.py
+This app uses the OpenAI API under my developer key and is subject to rate limits or cost controls. GPT responses are AI-generated and should not be taken as professional advice.
+
+---
+
+## Links
+
+- GitHub: https://github.com/Deepak50202/Eonra
+- LinkedIn: https://linkedin.com/in/deepakenjapuri

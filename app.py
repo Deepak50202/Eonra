@@ -1,4 +1,14 @@
 import streamlit as st
+import openai
+from openai import OpenAI
+
+import os
+
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+st.write("✅ Loaded key:", openai.api_key[:10])
+
+
+
 
 # Initialize memory for recent questions
 if "question_history" not in st.session_state:
@@ -106,7 +116,6 @@ def eonra_reasoning(question):
         trace.append("→ Detected keyword: 'deploy'")
         response = "🚀 You can deploy Python apps using Streamlit Share, Render, or Hugging Face Spaces."
         follow_up = "Want help deploying Eonra online?"
-
     elif "learn" in question or "learning path" in question:
         topic = "Learning Path"
         trace.append("→ Detected keyword: 'learn'")
@@ -114,11 +123,23 @@ def eonra_reasoning(question):
         follow_up = "Need a step-by-step plan based on your goals?"
 
     else:
-        trace.append("→ No clear keyword found")
-        if st.session_state.last_topic:
-            response = f"🤔 Not sure what you meant. Are you asking a follow-up about **{st.session_state.last_topic}**?"
-        else:
-            response = "🔍 I'm still learning! Try asking about AI, Python, or internships."
+        # GPT fallback
+        trace.append("→ No logic match. Asking GPT...")
+        try:
+            client = OpenAI()
+            gpt_reply = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {"role": "system", "content": "You are Eonra, a helpful and friendly assistant who answers clearly."},
+                    {"role": "user", "content": question}
+                ],
+                temperature=0.7,
+                max_tokens=150
+            )
+            response = gpt_reply.choices[0].message.content.strip()
+        except Exception as e:
+            response = "⚠️ GPT is currently unavailable. Please try again later."
+            trace.append(f"→ GPT error: {e}")
 
 
     # Save topic to memory
