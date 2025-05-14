@@ -1,64 +1,63 @@
 # Changelog – Eonra
 
-All notable changes to this project are documented below.
+This file documents the key updates and milestones in the Eonra project.
 
 ---
 
 ## [v1.0] – 2025-05-13
-### Added
-- GPT-3.5-turbo fallback using OpenAI’s latest API
-- Combined logic-based and AI-generated response engine
-- Session feedback system (Yes / No)
-- Session summary to display topics covered
-- Error handling for quota issues and unavailable responses
-- Updated README and documentation for final release
+### Final Release
+- Public deployment on Streamlit Cloud
+- Added OpenAI GPT-3.5 fallback for unmatched questions
+- Starter prompt buttons for first-time users
+- Session summary generation
+- Feedback system (Yes/No) for responses
+- Related topic recommendations
+- Secrets management for OpenAI key
+- README and Changelog updated to reflect deployment status
 
 ---
 
 ## [v0.5] – 2025-05-12
-### Added
-- Starter question buttons for improved UX
-- Clear Memory button to reset session context
-- Session summary showing recently discussed topics
-- Feedback system (👍 / 👎) to gauge helpfulness
-- Related topic suggestions after each response
-- Improved memory logic to track recent questions and topics
-- Enhanced interface responsiveness and accessibility
+### Major Enhancements
+- Clear memory button to reset session state
+- Recent question history tracking
+- Follow-up suggestions based on topic memory
+- Streamlined user interface with logic explanations
+- Added five new logic topics:
+  - Streamlit
+  - Resume Tips
+  - Project Ideas
+  - Deployment
+  - Learning Paths
 
 ---
 
 ## [v0.4] – 2025-05-04
-### Added
-- Clear Memory button for session reset
-- Reset logic for both question history and last topic
-- Support for smoother repeated usage
+### Improvements
+- Added session memory to track the last 3 questions
+- Eonra now displays recent context before responding
+- Improved natural flow of reasoning logic
 
 ---
 
 ## [v0.3] – 2025-05-04
-### Added
-- Expanded reasoning topics:
-  - Streamlit
-  - Resume tips
-  - Projects
-  - Deployment
-  - Learning paths
-- Enhanced topic detection and keyword mapping
-- Updated follow-up suggestion logic
+### Features
+- Expanded topic support (logic-driven)
+- Enhanced traceable reasoning steps
+- Suggested follow-up responses
 
 ---
 
 ## [v0.2] – 2025-05-04
-### Added
-- Short-term memory system to store recent questions
-- Recent context display before generating a response
-- Improved natural flow of topic-following questions
+### Core Additions
+- Introduced trace logging for each logic decision
+- Improved interface layout
+- Memory state added with last_topic storage
 
 ---
 
-## [v0.1] – 2025-05-02
-### Initial Release
-- Basic reasoning engine using keyword detection
-- Traceable logic flow for each question
-- Response formatting and basic follow-up suggestions
-- Streamlit interface with structured UI
+## [v0.1] – 2025-05-03
+### Initial Launch
+- MVP created with basic logic engine
+- Brain-like topic recognition structure
+- Streamlit-based UI with response rendering

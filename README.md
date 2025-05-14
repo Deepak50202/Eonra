@@ -1,62 +1,90 @@
 # Eonra – Brain-Inspired AI Reasoning System
 
-Eonra is a logic-driven AI assistant that simulates how the human brain reasons, recalls, and responds. It combines structured topic recognition with fallback support using OpenAI's GPT API for open-ended queries.
+Eonra is a logic-driven AI assistant that simulates how the human brain reasons, recalls, and responds. It combines structured topic recognition with fallback support using OpenAI's GPT-3.5 API for open-ended questions.
 
-This project was built as a portfolio-grade MVP to demonstrate practical skills in Python development, AI integration, and product thinking.
+This project was built as a full-stack MVP to showcase skills in Python development, AI integration, deployment, and user-focused design.
+
+---
+
+## Live Demo
+
+[Launch Eonra on Streamlit](https://deepak50202-eonra-app-kcubv5.streamlit.app)  
+[View on GitHub](https://github.com/Deepak50202/Eonra)
 
 ---
 
 ## Features
 
-- Logic-based keyword reasoning system
-- Short-term memory to track recent user questions
-- Intelligent follow-up suggestions based on context
-- Fallback to GPT-3.5-turbo for unmatched queries
-- Starter prompts and session summaries
-- Clear feedback interface (helpful / not helpful)
-- Secrets management using Streamlit configuration
-- One-click session reset (Clear Memory)
+- Logic-based keyword detection and topic mapping  
+- Short-term memory for recent user queries  
+- Smart follow-up suggestions based on previous topics  
+- GPT-3.5 Turbo fallback for unmatched questions  
+- Starter prompt buttons for first-time users  
+- Session summary with topic coverage  
+- Clear memory button to reset state  
+- Feedback interface for user input (Yes/No)  
+- Related topic recommendations  
 
 ---
 
 ## Why I Built This
 
-This project was designed to go beyond a standard chatbot. Eonra is a blend of traditional logic and generative AI, structured to mimic real cognitive behavior and guide users toward deeper learning and better answers.
+I wanted to move beyond static chatbots and create something that reasons like a human. Eonra helps users understand not just answers, but how answers are formed — and uses GPT only when needed.
 
-It was also my way of learning and applying:
-- Python and Streamlit
-- API integration (OpenAI)
-- Version control (Git/GitHub)
-- Application structure and memory handling
-- Clean UI and user flow
+This was also a practical way to apply and learn:
+
+- Python and Streamlit  
+- API Integration (OpenAI)  
+- Git and GitHub workflow  
+- State management and memory logic  
+- Clean, minimal UI design  
+- Public cloud deployment with environment secrets  
 
 ---
 
 ## Tech Stack
 
-- Python 3
-- Streamlit
-- OpenAI GPT API (v1.0 SDK)
-- Git and GitHub
+- Python 3  
+- Streamlit  
+- OpenAI API (v1.0 SDK, GPT-3.5 Turbo)  
+- Git & GitHub  
+- Streamlit Cloud (Deployment)  
 
 ---
 
-## Future Plans
+## How It Works
 
-- Long-term conversation memory
-- User authentication and personal context
-- Deployment as a SaaS application
-- Customizable GPT keys per user
+1. Detects keywords like “AI”, “Python”, “Resume”, etc.  
+2. If matched → returns a prebuilt logical answer and follow-up.  
+3. If not matched → sends the question to GPT-3.5 via OpenAI.  
+4. Shows memory trace, session summary, and related links.  
+
+---
+
+## Deployment Notes
+
+- The app is deployed on Streamlit Cloud  
+- Secrets like the OpenAI API key are safely stored in `.streamlit/secrets.toml`  
+- A funded OpenAI account is required to enable GPT responses  
+
+---
+
+## Future Enhancements
+
+- Long-term memory per user  
+- Login/authentication for personalized sessions  
+- Convert into a full SaaS platform  
+- Multi-model GPT switching and key customization  
 
 ---
 
 ## Disclaimer
 
-This app uses the OpenAI API under my developer key and is subject to rate limits or cost controls. GPT responses are AI-generated and should not be taken as professional advice.
+This app uses the OpenAI API under a personal developer account and may stop working when API limits are reached. Responses are AI-generated and should be independently verified for critical use.
 
 ---
 
-## Links
+## Connect
 
-- GitHub: https://github.com/Deepak50202/Eonra
-- LinkedIn: https://linkedin.com/in/deepakenjapuri
+[GitHub – Deepak50202](https://github.com/Deepak50202/Eonra)  
+[LinkedIn – Deepak Enjapuri](https://linkedin.com/in/deepakenjapuri)
